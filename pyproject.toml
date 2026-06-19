@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-statusline-stickers"
+version = "0.1.0"
+description = "Themed sprite-glyph font for the Claude Code statusline — a sticker per agent."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Renato" }]
+keywords = ["claude-code", "statusline", "font", "sbix", "terminal", "stickers"]
+dependencies = ["fonttools>=4.0", "pillow>=10.0"]
+
+[project.scripts]
+stickers = "claude_statusline_stickers.stickers:main"
+
+[tool.setuptools]
+packages = ["claude_statusline_stickers"]
+
+[tool.setuptools.package-data]
+claude_statusline_stickers = ["themes/*/theme.json", "statusline/*.sh"]

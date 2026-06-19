@@ -1,0 +1,14 @@
+**/*.DS_Store
+**/*CLAUDE.md
+**/*.claude
+**/*__*
+**/*.venv
+
+build/
+dist/
+*.egg-info/
+
+# Theme sprite PNGs are third-party art, fetched on demand by `stickers fetch`
+# (URLs live in each theme.json) — not redistributed here. A "bring-your-own"
+# theme whose sprites have no url must un-ignore its PNGs.
+claude_statusline_stickers/themes/*/*.png

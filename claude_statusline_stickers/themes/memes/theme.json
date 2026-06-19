@@ -1,0 +1,69 @@
+{
+  "name": "memes",
+  "sprites": [
+    {
+      "name": "doge",
+      "key": "doge",
+      "url": "https://assets.stickpng.com/images/5845e687fb0b0755fa99d7ee.png",
+      "agentNames": [
+        "doge"
+      ]
+    },
+    {
+      "name": "grumpycat",
+      "key": "grumpycat",
+      "url": "https://assets.stickpng.com/images/5845e10e7733c3558233c0ea.png",
+      "agentNames": [
+        "grumpycat"
+      ]
+    },
+    {
+      "name": "harambe",
+      "key": "harambe",
+      "url": "https://assets.stickpng.com/images/584877837b758d6b0758d00d.png",
+      "agentNames": [
+        "harambe"
+      ]
+    },
+    {
+      "name": "badluck",
+      "key": "badluck",
+      "url": "https://assets.stickpng.com/images/58961fa0cba9841eabab60fb.png",
+      "agentNames": [
+        "badluck"
+      ]
+    },
+    {
+      "name": "pepe",
+      "key": "pepe",
+      "url": "https://assets.stickpng.com/images/5845ed1bdda95a5696fa1a2a.png",
+      "agentNames": [
+        "pepe"
+      ]
+    },
+    {
+      "name": "justdoit",
+      "key": "justdoit",
+      "url": "https://assets.stickpng.com/images/58909b545236a4e0f6e2f975.png",
+      "agentNames": [
+        "justdoit"
+      ]
+    },
+    {
+      "name": "gaben",
+      "key": "gaben",
+      "url": "https://assets.stickpng.com/images/58f7684584b713aab61d0a07.png",
+      "agentNames": [
+        "gaben"
+      ]
+    },
+    {
+      "name": "gabedog",
+      "key": "gabedog",
+      "url": "https://assets.stickpng.com/images/588a4ccf528ea3cc60d3c4a5.png",
+      "agentNames": [
+        "gabedog"
+      ]
+    }
+  ]
+}

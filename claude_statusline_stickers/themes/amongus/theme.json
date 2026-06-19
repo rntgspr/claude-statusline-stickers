@@ -1,0 +1,53 @@
+{
+  "name": "amongus",
+  "sprites": [
+    {
+      "name": "red",
+      "key": "red",
+      "url": "https://assets.stickpng.com/images/61d183263a856e0004c6334a.png",
+      "agentNames": [
+        "red"
+      ]
+    },
+    {
+      "name": "green",
+      "key": "green",
+      "url": "https://assets.stickpng.com/images/61d183753a856e0004c6334c.png",
+      "agentNames": [
+        "green"
+      ]
+    },
+    {
+      "name": "cyan",
+      "key": "cyan",
+      "url": "https://assets.stickpng.com/images/61d183393a856e0004c6334b.png",
+      "agentNames": [
+        "cyan"
+      ]
+    },
+    {
+      "name": "yellow",
+      "key": "yellow",
+      "url": "https://assets.stickpng.com/images/61d183173a856e0004c63349.png",
+      "agentNames": [
+        "yellow"
+      ]
+    },
+    {
+      "name": "crew",
+      "key": "crew",
+      "url": "https://assets.stickpng.com/images/61d186b53a856e0004c6334d.png",
+      "agentNames": [
+        "crew"
+      ]
+    },
+    {
+      "name": "logo",
+      "key": "logo",
+      "url": "https://assets.stickpng.com/images/61d182f93a856e0004c63348.png",
+      "agentNames": [
+        "logo"
+      ]
+    }
+  ]
+}
