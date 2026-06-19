@@ -1,0 +1,73 @@
+{
+  "name": "pokemon",
+  "emoji_probe": {
+    "codepoint": "1F422",
+    "sprite": "blastoise"
+  },
+  "sprites": [
+    {
+      "name": "bulbasaur",
+      "key": "icon0001",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0001_f00_s0.png",
+      "agentNames": [
+        "bulbasaur"
+      ]
+    },
+    {
+      "name": "charmander",
+      "key": "icon0004",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0004_f00_s0.png",
+      "agentNames": [
+        "charmander"
+      ]
+    },
+    {
+      "name": "blastoise",
+      "key": "icon0009",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0009_f00_s0.png",
+      "agentNames": [
+        "blastoise"
+      ]
+    },
+    {
+      "name": "pikachu",
+      "key": "icon0025",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0025_f00_s0.png",
+      "agentNames": [
+        "pikachu"
+      ]
+    },
+    {
+      "name": "vulpix",
+      "key": "icon0037",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0037_f00_s0.png",
+      "agentNames": [
+        "vulpix"
+      ]
+    },
+    {
+      "name": "psyduck",
+      "key": "icon0054",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0054_f00_s0.png",
+      "agentNames": [
+        "psyduck"
+      ]
+    },
+    {
+      "name": "tauros",
+      "key": "icon0128",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0128_f00_s0.png",
+      "agentNames": [
+        "tauros"
+      ]
+    },
+    {
+      "name": "pokeball",
+      "key": "pokeball",
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png",
+      "agentNames": [
+        "pokeball"
+      ]
+    }
+  ]
+}

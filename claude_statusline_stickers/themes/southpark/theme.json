@@ -1,0 +1,69 @@
+{
+  "name": "southpark",
+  "sprites": [
+    {
+      "name": "cartman",
+      "key": "cartman",
+      "url": "https://assets.stickpng.com/images/587170b17b7f6103e35c6cb7.png",
+      "agentNames": [
+        "cartman"
+      ]
+    },
+    {
+      "name": "kenny",
+      "key": "kenny",
+      "url": "https://assets.stickpng.com/images/5871709c7b7f6103e35c6cb5.png",
+      "agentNames": [
+        "kenny"
+      ]
+    },
+    {
+      "name": "butters",
+      "key": "butters",
+      "url": "https://assets.stickpng.com/images/5871705e7b7f6103e35c6cb0.png",
+      "agentNames": [
+        "butters"
+      ]
+    },
+    {
+      "name": "chef",
+      "key": "chef",
+      "url": "https://assets.stickpng.com/images/5871704d7b7f6103e35c6cae.png",
+      "agentNames": [
+        "chef"
+      ]
+    },
+    {
+      "name": "clyde",
+      "key": "clyde",
+      "url": "https://assets.stickpng.com/images/587170197b7f6103e35c6caa.png",
+      "agentNames": [
+        "clyde"
+      ]
+    },
+    {
+      "name": "craig",
+      "key": "craig",
+      "url": "https://assets.stickpng.com/images/58716fb97b7f6103e35c6c9c.png",
+      "agentNames": [
+        "craig"
+      ]
+    },
+    {
+      "name": "damien",
+      "key": "damien",
+      "url": "https://assets.stickpng.com/images/58716ff77b7f6103e35c6ca5.png",
+      "agentNames": [
+        "damien"
+      ]
+    },
+    {
+      "name": "citywok",
+      "key": "citywok",
+      "url": "https://assets.stickpng.com/images/587170057b7f6103e35c6ca7.png",
+      "agentNames": [
+        "citywok"
+      ]
+    }
+  ]
+}
