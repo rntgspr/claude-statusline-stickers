@@ -65,9 +65,16 @@ CELL_SCALE_Y = 2.20  # vertical spacing — Warp: Anonymous Pro 20, LineHeight 2
 SPLIT = 0.5          # fraction of extra vertical space assumed BELOW the box
 
 # --- codepoint layout --------------------------------------------------------
-CP_BASE = 0xF1D00    # first codepoint candidate for the sprite block
-CP_STRIDE = 0x140    # codepoints reserved per sprite (icon + full glyph + headroom)
-SPRITE_CP_OFF = 0x110  # offset of the single-glyph full sprite within a block
+# A theme's codepoints are anchored to the `codepointSlot` its theme.json
+# declares, NOT to its position in the build's theme list — so adding or
+# removing a theme never moves another theme's sprites. That matters because the
+# font is fallback-only: a terminal resolves a codepoint against whatever build
+# it still holds cached, and a shifted layout makes it draw a different theme's
+# sprite instead of failing visibly.
+CP_BASE = 0xF1D00    # base of slot 0 (reserved for the probe glyphs)
+THEME_SPAN = 0x400   # codepoints reserved per theme slot (63 sprites + the blank)
+CP_STRIDE = 0x10     # codepoints reserved per sprite (icon + full glyph + headroom)
+SPRITE_CP_OFF = 0x8  # offset of the single-glyph full sprite within a block
 
 # --- single-glyph full sprite ------------------------------------------------
 # The whole sprite is ONE glyph — Warp renders ink ~28 cells right and 7 up of

@@ -1,0 +1,134 @@
+{
+  "name": "smurfs",
+  "codepointSlot": 7,
+  "sprites": [
+    {
+      "name": "papa",
+      "key": "papa",
+      "url": "https://assets.stickpng.com/images/5a7b6d59abc3d121aba7109a.png",
+      "agentNames": [
+        "papa"
+      ]
+    },
+    {
+      "name": "smurfette",
+      "key": "smurfette",
+      "url": "https://assets.stickpng.com/images/5a7b6d93abc3d121aba710a0.png",
+      "agentNames": [
+        "smurfette"
+      ]
+    },
+    {
+      "name": "brainy",
+      "key": "brainy",
+      "url": "https://assets.stickpng.com/images/58b83d0b15d8273a5cab2f9b.png",
+      "agentNames": [
+        "brainy"
+      ]
+    },
+    {
+      "name": "clumsy",
+      "key": "clumsy",
+      "url": "https://assets.stickpng.com/images/5a7b6d34abc3d121aba71095.png",
+      "agentNames": [
+        "clumsy"
+      ]
+    },
+    {
+      "name": "hefty",
+      "key": "hefty",
+      "url": "https://assets.stickpng.com/images/58b83d1115d8273a5cab2f9c.png",
+      "agentNames": [
+        "hefty"
+      ]
+    },
+    {
+      "name": "grouchy",
+      "key": "grouchy",
+      "url": "https://assets.stickpng.com/images/5a7b6d3aabc3d121aba71096.png",
+      "agentNames": [
+        "grouchy"
+      ]
+    },
+    {
+      "name": "gutsy",
+      "key": "gutsy",
+      "url": "https://assets.stickpng.com/images/58b83d0315d8273a5cab2f9a.png",
+      "agentNames": [
+        "gutsy"
+      ]
+    },
+    {
+      "name": "vanity",
+      "key": "vanity",
+      "url": "https://assets.stickpng.com/images/58b83cfb15d8273a5cab2f99.png",
+      "agentNames": [
+        "vanity"
+      ]
+    },
+    {
+      "name": "smurf",
+      "key": "smurf",
+      "url": "https://assets.stickpng.com/images/5a7b6d71abc3d121aba7109d.png",
+      "agentNames": [
+        "smurf"
+      ]
+    },
+    {
+      "name": "blossom",
+      "key": "blossom",
+      "url": "https://assets.stickpng.com/images/5a7b6dd3abc3d121aba710a3.png",
+      "agentNames": [
+        "blossom"
+      ]
+    },
+    {
+      "name": "lily",
+      "key": "lily",
+      "url": "https://assets.stickpng.com/images/5a7b6d6aabc3d121aba7109c.png",
+      "agentNames": [
+        "lily"
+      ]
+    },
+    {
+      "name": "melody",
+      "key": "melody",
+      "url": "https://assets.stickpng.com/images/5a7b6d7eabc3d121aba7109e.png",
+      "agentNames": [
+        "melody"
+      ]
+    },
+    {
+      "name": "storm",
+      "key": "storm",
+      "url": "https://assets.stickpng.com/images/5a7b6db1abc3d121aba710a2.png",
+      "agentNames": [
+        "storm"
+      ]
+    },
+    {
+      "name": "vexy",
+      "key": "vexy",
+      "url": "https://assets.stickpng.com/images/58b83ca615d8273a5cab2f96.png",
+      "agentNames": [
+        "vexy"
+      ]
+    },
+    {
+      "name": "hackus",
+      "key": "hackus",
+      "url": "https://assets.stickpng.com/images/58b83cb615d8273a5cab2f98.png",
+      "agentNames": [
+        "hackus"
+      ]
+    },
+    {
+      "name": "gargamel",
+      "key": "gargamel",
+      "url": "https://assets.stickpng.com/images/58b83c9615d8273a5cab2f94.png",
+      "agentNames": [
+        "gargamel"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "pokemon",
+  "codepointSlot": 1,
   "emoji_probe": {
     "codepoint": "1F422",
     "sprite": "blastoise"

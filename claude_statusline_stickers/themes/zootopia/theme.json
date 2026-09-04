@@ -1,0 +1,126 @@
+{
+  "name": "zootopia",
+  "codepointSlot": 8,
+  "sprites": [
+    {
+      "name": "judy",
+      "key": "judy",
+      "url": "https://assets.stickpng.com/images/5c52bab4bb7e2a029589d287.png",
+      "agentNames": [
+        "judy"
+      ]
+    },
+    {
+      "name": "nick",
+      "key": "nick",
+      "url": "https://assets.stickpng.com/images/5c52bb7cbb7e2a029589d29f.png",
+      "agentNames": [
+        "nick"
+      ]
+    },
+    {
+      "name": "bogo",
+      "key": "bogo",
+      "url": "https://assets.stickpng.com/images/5c52baddbb7e2a029589d28d.png",
+      "agentNames": [
+        "bogo"
+      ]
+    },
+    {
+      "name": "clawhauser",
+      "key": "clawhauser",
+      "url": "https://assets.stickpng.com/images/5c52bac9bb7e2a029589d28a.png",
+      "agentNames": [
+        "clawhauser"
+      ]
+    },
+    {
+      "name": "bellwether",
+      "key": "bellwether",
+      "url": "https://assets.stickpng.com/images/5c52baf1bb7e2a029589d28f.png",
+      "agentNames": [
+        "bellwether"
+      ]
+    },
+    {
+      "name": "doug",
+      "key": "doug",
+      "url": "https://assets.stickpng.com/images/5c52bb02bb7e2a029589d291.png",
+      "agentNames": [
+        "doug"
+      ]
+    },
+    {
+      "name": "finnick",
+      "key": "finnick",
+      "url": "https://assets.stickpng.com/images/5c52bb0abb7e2a029589d292.png",
+      "agentNames": [
+        "finnick"
+      ]
+    },
+    {
+      "name": "flash",
+      "key": "flash",
+      "url": "https://assets.stickpng.com/images/5c52bb11bb7e2a029589d293.png",
+      "agentNames": [
+        "flash"
+      ]
+    },
+    {
+      "name": "gazelle",
+      "key": "gazelle",
+      "url": "https://assets.stickpng.com/images/5c52bb34bb7e2a029589d297.png",
+      "agentNames": [
+        "gazelle"
+      ]
+    },
+    {
+      "name": "lionheart",
+      "key": "lionheart",
+      "url": "https://assets.stickpng.com/images/5c52bb64bb7e2a029589d29c.png",
+      "agentNames": [
+        "lionheart"
+      ]
+    },
+    {
+      "name": "mrbig",
+      "key": "mrbig",
+      "url": "https://assets.stickpng.com/images/5c52bb6cbb7e2a029589d29d.png",
+      "agentNames": [
+        "mrbig"
+      ]
+    },
+    {
+      "name": "otterton",
+      "key": "otterton",
+      "url": "https://assets.stickpng.com/images/5c52bb75bb7e2a029589d29e.png",
+      "agentNames": [
+        "otterton"
+      ]
+    },
+    {
+      "name": "priscilla",
+      "key": "priscilla",
+      "url": "https://assets.stickpng.com/images/5c52bb88bb7e2a029589d2a0.png",
+      "agentNames": [
+        "priscilla"
+      ]
+    },
+    {
+      "name": "yax",
+      "key": "yax",
+      "url": "https://assets.stickpng.com/images/5c52bb9bbb7e2a029589d2a1.png",
+      "agentNames": [
+        "yax"
+      ]
+    },
+    {
+      "name": "zoologo",
+      "key": "zoologo",
+      "url": "https://assets.stickpng.com/images/5c52bb5cbb7e2a029589d29b.png",
+      "agentNames": [
+        "zoologo"
+      ]
+    }
+  ]
+}

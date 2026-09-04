@@ -1,0 +1,94 @@
+{
+  "name": "cars",
+  "codepointSlot": 6,
+  "sprites": [
+    {
+      "name": "mcqueen",
+      "key": "mcqueen",
+      "url": "https://assets.stickpng.com/images/59db69d33752880e93e16efc.png",
+      "agentNames": [
+        "mcqueen"
+      ]
+    },
+    {
+      "name": "lightning",
+      "key": "lightning",
+      "url": "https://assets.stickpng.com/images/59db69c73752880e93e16efb.png",
+      "agentNames": [
+        "lightning"
+      ]
+    },
+    {
+      "name": "ramon",
+      "key": "ramon",
+      "url": "https://assets.stickpng.com/images/59db6a243752880e93e16f01.png",
+      "agentNames": [
+        "ramon"
+      ]
+    },
+    {
+      "name": "flo",
+      "key": "flo",
+      "url": "https://assets.stickpng.com/images/59db69733752880e93e16ef4.png",
+      "agentNames": [
+        "flo"
+      ]
+    },
+    {
+      "name": "francesco",
+      "key": "francesco",
+      "url": "https://assets.stickpng.com/images/59db69433752880e93e16eee.png",
+      "agentNames": [
+        "francesco"
+      ]
+    },
+    {
+      "name": "schnell",
+      "key": "schnell",
+      "url": "https://assets.stickpng.com/images/59db69533752880e93e16ef0.png",
+      "agentNames": [
+        "schnell"
+      ]
+    },
+    {
+      "name": "finn",
+      "key": "finn",
+      "url": "https://assets.stickpng.com/images/59db693c3752880e93e16eed.png",
+      "agentNames": [
+        "finn"
+      ]
+    },
+    {
+      "name": "bobby",
+      "key": "bobby",
+      "url": "https://assets.stickpng.com/images/59db694b3752880e93e16eef.png",
+      "agentNames": [
+        "bobby"
+      ]
+    },
+    {
+      "name": "snotrod",
+      "key": "snotrod",
+      "url": "https://assets.stickpng.com/images/59db69fe3752880e93e16efe.png",
+      "agentNames": [
+        "snotrod"
+      ]
+    },
+    {
+      "name": "king",
+      "key": "king",
+      "url": "https://assets.stickpng.com/images/59db69ed3752880e93e16efd.png",
+      "agentNames": [
+        "king"
+      ]
+    },
+    {
+      "name": "carslogo",
+      "key": "carslogo",
+      "url": "https://assets.stickpng.com/images/59db69be3752880e93e16efa.png",
+      "agentNames": [
+        "carslogo"
+      ]
+    }
+  ]
+}

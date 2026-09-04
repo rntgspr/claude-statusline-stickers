@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Build a themed glyph font (build stage).
 
-With no theme selected, builds EVERY theme into ONE font — each theme at a
-distinct PUA codepoint range — and writes a manifest mapping each sprite's
+With no theme selected, builds EVERY theme into ONE font — each theme in the PUA
+slot its theme.json declares, so a theme's codepoints never move when another
+theme is added or removed — and writes a manifest mapping each sprite's
 agentNames to its glyph text, so the statusline can show any agent's sprite
 without reinstalling. With a theme selected, builds only that theme.
 
@@ -18,10 +19,14 @@ from fontTools.ttLib import TTFont
 from PIL import Image
 
 from . import renderers
-from .codepoints import CodepointLayout, find_free_base
+from .codepoints import (
+    CodepointLayout,
+    collides_with_skeleton,
+    slot_capacity,
+    theme_base,
+)
 from .config import (
     BUILD_DIR,
-    CP_STRIDE,
     FONT_GLOB,
     OUT_NAME,
     RENAMES,
@@ -33,6 +38,46 @@ from .geometry import CellMetrics
 from .theme import Theme
 
 _SUFFIX = "-Regular.ttf"
+PROBE_SLOT = 0
+
+
+def check_slots(themes, font):
+    """Fail the build on any slot that is missing, reserved, duplicated, too
+    small for its theme, or overlapping the skeleton font's own cmap.
+
+    Every one of these would otherwise produce a font that looks fine and maps a
+    codepoint to the wrong sprite, which is the failure this layout exists to
+    make impossible. So they are hard errors, named, before a single glyph is
+    rendered.
+    """
+    claimed = {}
+    for theme in themes:
+        slot = theme.codepoint_slot
+        if slot is None:
+            raise SystemExit(
+                f"theme {theme.name!r} declares no codepointSlot — "
+                f"add one to its theme.json (slot {PROBE_SLOT} is reserved)"
+            )
+        if slot == PROBE_SLOT:
+            raise SystemExit(
+                f"theme {theme.name!r} claims slot {PROBE_SLOT}, reserved for the probe glyphs"
+            )
+        if slot in claimed:
+            raise SystemExit(
+                f"codepointSlot collision: slot {slot} claimed by both "
+                f"{claimed[slot]!r} and {theme.name!r}"
+            )
+        if len(theme.sprites) > slot_capacity():
+            raise SystemExit(
+                f"theme {theme.name!r} has {len(theme.sprites)} sprites; "
+                f"a slot holds {slot_capacity()}"
+            )
+        if collides_with_skeleton(font, slot, len(theme.sprites)):
+            raise SystemExit(
+                f"theme {theme.name!r} slot {slot} overlaps a codepoint the "
+                f"skeleton font already maps"
+            )
+        claimed[slot] = theme.name
 
 
 def build(themes, out_fonts, out_cache):
@@ -41,23 +86,18 @@ def build(themes, out_fonts, out_cache):
     metrics = CellMetrics.from_font(font)
     canvas = FontCanvas(font, metrics)
     out_cache.mkdir(parents=True, exist_ok=True)
+    check_slots(themes, font)
 
-    # one contiguous region: a leading block for the probes, then one
-    # (sprites + blank) block per theme
-    total = CP_STRIDE + sum((len(t.sprites) + 1) * CP_STRIDE for t in themes)
-    base = find_free_base(font, total)
-    cursor = base
-
-    # probes once, in their own block
-    probe_layout = CodepointLayout(cursor, 0)
+    # probes once, in the reserved slot
+    probe_layout = CodepointLayout(theme_base(PROBE_SLOT), 0)
     renderers.add_blank(canvas, probe_layout, glyph="sprite.blank")
     renderers.render_probes(canvas, probe_layout, cache_dir=out_cache)
-    cursor += CP_STRIDE
 
     manifest = {"family": OUT_NAME[: -len(_SUFFIX)], "agents": {}, "themes": {}}
     for theme in themes:
-        layout = CodepointLayout(cursor, len(theme.sprites))
-        cursor += (len(theme.sprites) + 1) * CP_STRIDE
+        # the slot is the theme's own, so this base does not depend on which
+        # other themes this build happens to include
+        layout = CodepointLayout(theme_base(theme.codepoint_slot), len(theme.sprites))
         renderers.add_blank(canvas, layout, glyph=f"sprite.{theme.name}.blank")
 
         keys = []
@@ -87,9 +127,10 @@ def build(themes, out_fonts, out_cache):
     canvas.finalize(out_fonts, OUT_NAME, RENAMES, purge=FONT_GLOB)
     (out_cache / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
+    slots = ", ".join(f"{t.name}={t.codepoint_slot}" for t in themes)
     print(
         f"saved: {out_fonts.parent.name}/{OUT_NAME}  "
-        f"themes {len(themes)}, agents {len(manifest['agents'])}, base U+{base:05X}"
+        f"themes {len(themes)}, agents {len(manifest['agents'])}, slots [{slots}]"
     )
     return manifest
 

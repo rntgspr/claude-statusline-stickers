@@ -87,13 +87,16 @@ new font. (The sticker only shows in a dir named after an agent — see below.)
 
 ## Themes & agents
 
-Four themes are bundled (`pokemon`, `southpark`, `amongus`, `memes`), so a fresh
-install works with zero setup — `stickers fetch` just pulls their sprites. The sticker
-shown is chosen by the **agent** — resolved from the **project dir itself** or the
-**folder right above it** (`…/agentic-workspace/<agent>/<project>`), the current
-dir winning on conflict. Each sprite in a `theme.json` declares `agentNames`, and
-the build compiles a manifest mapping agent → sprite. A dir matching no agent
-(and not under `agentic-workspace`) shows no sticker.
+Eight themes are bundled (`pokemon`, `southpark`, `amongus`, `memes`,
+`powerrangers`, `cars`, `smurfs`, `zootopia`), so a fresh install works with
+zero setup —
+`stickers fetch` just pulls their sprites. The sticker shown is chosen by the
+**agent** — resolved from the **project dir itself** or the **folder right above
+it** (`…/agentic-workspace/<agent>/<project>`), the current dir winning on
+conflict. Each sprite in a `theme.json` declares `agentNames`, and the build
+compiles a manifest mapping agent → sprite. A dir matching no agent (and not
+under `agentic-workspace`) shows no sticker. The full list is at the bottom:
+[Bundled agent names](#bundled-agent-names).
 
 ### Add your own theme
 
@@ -102,11 +105,18 @@ the build compiles a manifest mapping agent → sprite. A dir matching no agent
    ```json
    {
      "name": "<name>",
+     "codepointSlot": 9,
      "sprites": [
        { "name": "hero", "key": "hero", "url": "https://…/hero.png", "agentNames": ["hero"] }
      ]
    }
    ```
+   `codepointSlot` is the theme's permanent home in the PUA — pick a number no
+   other theme uses (bundled themes take 1–8; slot 0 is the probe glyphs). It is
+   what keeps a theme's sprites at the same codepoints when other themes come and
+   go, so the terminal's cached font can never draw the wrong one. A missing or
+   duplicated slot fails the build by name. `agentNames` must be unique across
+   *all* themes too — the manifest is one flat agent→sprite map.
 2. `stickers fetch --theme <name>` (or `stickers fetch` for all).
 3. `stickers build && stickers install`.
 
@@ -131,7 +141,9 @@ height shifts it — adjust `CELL_SCALE_Y` (and re-measure) in
   fallback outline) — size the image first, then derive cells.
 - Engines without `sbix` get the traced monochrome outline, tintable via ANSI.
 - Stale font after a rebuild: **Cmd+Q** the terminal. If it resolves to
-  `.LastResort`, run `atsutil databases -removeUser`.
+  `.LastResort`, run `atsutil databases -removeUser`. A stale font can only ever
+  show *nothing* for a theme it has not seen — never another theme's sprite —
+  because each theme's codepoints are pinned to its `codepointSlot`.
 
 ## Credits & licence
 
@@ -140,3 +152,37 @@ Pokémon HOME, [OpenMoji](https://openmoji.org), [StickPNG](https://www.stickpng
 and is **downloaded locally by `stickers fetch`, never redistributed in this
 repo**. The skeleton font (Anonymous Pro, © Mark Simonson, OFL) is used only for
 its cell metrics; no glyph of it ships in the output.
+
+## Bundled agent names
+
+Name the dir (or its parent) after one of these and the matching sticker shows.
+Names are unique across every theme, so you never pick a theme — the name alone
+resolves it.
+
+| Theme | Agent names |
+|---|---|
+| `pokemon` | `bulbasaur` `charmander` `blastoise` `pikachu` `vulpix` `psyduck` `tauros` `pokeball` |
+| `southpark` | `cartman` `kenny` `butters` `chef` `clyde` `craig` `damien` `citywok` |
+| `amongus` | `red` `green` `cyan` `yellow` `crew` `logo` |
+| `memes` | `doge` `grumpycat` `harambe` `badluck` `pepe` `justdoit` `gaben` `gabedog` |
+| `powerrangers` | `megared` `megablue` `megablack` `megapink` `megagreen` `megayellow` `rangers5` `rangers6` |
+| `cars` | `mcqueen` `lightning` `ramon` `flo` `francesco` `schnell` `finn` `bobby` `snotrod` `king` `carslogo` |
+| `smurfs` | `papa` `smurfette` `brainy` `clumsy` `hefty` `grouchy` `gutsy` `vanity` `smurf` `blossom` `lily` `melody` `storm` `vexy` `hackus` `gargamel` |
+| `zootopia` | `judy` `nick` `bogo` `clawhauser` `bellwether` `doug` `finnick` `flash` `gazelle` `lionheart` `mrbig` `otterton` `priscilla` `yax` `zoologo` |
+
+The Power Rangers carry a `mega` prefix because `red`, `green`, and `yellow` are
+already Among Us — a duplicate `agentNames` entry fails the build outright. Same
+reason `cars` has `carslogo` rather than `logo`. In `cars`, `mcqueen` and
+`lightning` are the same character from two angles, and `bobby` is the Cars 2
+British police car. `smurfs` ships one sprite per character — StickPNG also
+carries the same characters in other poses, which would only produce agent names
+that mean nothing as a folder name. `smurf` is the generic, unnamed one. Same
+for `zootopia`; `zoologo` avoids Among Us's `logo`, and `finnick` (the fennec) is
+a different animal from `finn` (the Aston Martin).
+
+To see what the current build actually resolves:
+
+```bash
+jq -r '.agents | to_entries[] | "\(.value.theme)\t\(.key)"' \
+  ~/.claude/claude-statusline-stickers/manifest.json | sort
+```

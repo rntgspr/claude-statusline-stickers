@@ -1,11 +1,12 @@
 """Theme loading: a theme is a self-contained folder of sprites + font config.
 
-Each theme is themes/<name>/ — a theme.json (sprite list: name, cache key,
-optional source URL, optional agentNames; plus an optional emoji probe) and the
-sprite PNGs. theme.json ships in the package (read-only); the PNGs live in the
-work dir, fetched there. The active theme is chosen by STICKERS_THEME (default
-"pokemon"); building with no theme set builds every theme into one font. The
-font family name is fixed (config.FAMILY), shared by all.
+Each theme is themes/<name>/ — a theme.json (a permanent codepointSlot; the
+sprite list: name, cache key, optional source URL, optional agentNames; plus an
+optional emoji probe) and the sprite PNGs. theme.json ships in the package
+(read-only); the PNGs live in the work dir, fetched there. The active theme is
+chosen by STICKERS_THEME (default "pokemon"); building with no theme set builds
+every theme into one font. The font family name is fixed (config.FAMILY),
+shared by all.
 """
 import json
 import os
@@ -33,6 +34,10 @@ class Theme:
     name: str
     sprites: tuple         # tuple[Sprite, ...]
     emoji_probe: Optional[tuple] = None  # (codepoint:int, sprite_name:str) or None
+    # Permanent codepoint slot, declared by theme.json. None when the file omits
+    # it — build.py raises a named error rather than guess, because a guessed
+    # slot is exactly the positional layout this field exists to replace.
+    codepoint_slot: Optional[int] = None
 
     @classmethod
     def _theme_json(cls, name):
@@ -62,7 +67,12 @@ class Theme:
         probe = data.get("emoji_probe")
         emoji_probe = (int(probe["codepoint"], 16), probe["sprite"]) if probe else None
 
-        return cls(name=data["name"], sprites=sprites, emoji_probe=emoji_probe)
+        return cls(
+            name=data["name"],
+            sprites=sprites,
+            emoji_probe=emoji_probe,
+            codepoint_slot=data.get("codepointSlot"),
+        )
 
     @classmethod
     def discover(cls):

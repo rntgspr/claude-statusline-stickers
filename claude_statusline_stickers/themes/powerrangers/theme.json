@@ -1,0 +1,70 @@
+{
+  "name": "powerrangers",
+  "codepointSlot": 5,
+  "sprites": [
+    {
+      "name": "megared",
+      "key": "megared",
+      "url": "https://assets.stickpng.com/images/58c7ee7be665570916c653d9.png",
+      "agentNames": [
+        "megared"
+      ]
+    },
+    {
+      "name": "megablue",
+      "key": "megablue",
+      "url": "https://assets.stickpng.com/images/58c7ee73e665570916c653d8.png",
+      "agentNames": [
+        "megablue"
+      ]
+    },
+    {
+      "name": "megablack",
+      "key": "megablack",
+      "url": "https://assets.stickpng.com/images/58c7ee52e665570916c653d4.png",
+      "agentNames": [
+        "megablack"
+      ]
+    },
+    {
+      "name": "megapink",
+      "key": "megapink",
+      "url": "https://assets.stickpng.com/images/58c7ee62e665570916c653d6.png",
+      "agentNames": [
+        "megapink"
+      ]
+    },
+    {
+      "name": "megagreen",
+      "key": "megagreen",
+      "url": "https://assets.stickpng.com/images/58c7ee5be665570916c653d5.png",
+      "agentNames": [
+        "megagreen"
+      ]
+    },
+    {
+      "name": "megayellow",
+      "key": "megayellow",
+      "url": "https://assets.stickpng.com/images/58c7ee6be665570916c653d7.png",
+      "agentNames": [
+        "megayellow"
+      ]
+    },
+    {
+      "name": "rangers5",
+      "key": "rangers5",
+      "url": "https://assets.stickpng.com/images/580b57fbd9996e24bc43c055.png",
+      "agentNames": [
+        "rangers5"
+      ]
+    },
+    {
+      "name": "rangers6",
+      "key": "rangers6",
+      "url": "https://assets.stickpng.com/images/580b57fbd9996e24bc43c05a.png",
+      "agentNames": [
+        "rangers6"
+      ]
+    }
+  ]
+}
