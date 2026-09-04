@@ -1,20 +1,19 @@
 ---
 human_revised: false
-generated: false
 apps: [meta]
 ---
 
-<!-- llm:components -->
+<!-- cumaru:components -->
 | Key | Folder | Stack/Notes |
 |---|---|---|
 | engine | `claude_statusline_stickers/` | Python (fontTools, Pillow). Builds the sbix colour-glyph font from a theme's sprites. Pipeline modules `fetch`/`build`/`install`, each exposing `run()`, orchestrated by the `stickers` CLI (`stickers.py`). |
 | themes | `claude_statusline_stickers/themes/` | One folder per theme: `theme.json` (sprite list + source URLs), bundled in the package; the 256² sprite PNGs are fetched into the work dir. Active theme via `--theme` / `STICKERS_THEME` (default `pokemon`). |
 | statusline | `claude_statusline_stickers/statusline/` | Bash renderer (`stickers-command.sh`) that cats the built `font_*.txt` glyph lines into the Claude Code statusline. |
-<!-- /llm:components -->
+<!-- /cumaru:components -->
 
-<!-- llm:root -->
+<!-- cumaru:root -->
 **claude-statusline-stickers** renders full-colour sprites in the Claude Code statusline — which only allows text + ANSI — by encoding each sprite as a single Apple `sbix` colour-bitmap glyph at a Private-Use codepoint, installed as a fallback-only font macOS resolves automatically. Theme-driven (`--theme` / `STICKERS_THEME`): `pokemon`, `southpark`, `amongus`, `memes`. A `stickers` CLI drives the pipeline: `stickers fetch` (sprite URLs → work dir, normalized to 256²) → `stickers build` (→ local `$STICKERS_HOME/build/`, never touches the live system) → `stickers install` (→ `~/Library/Fonts` + `~/.claude/claude-statusline-stickers` + `~/.claude/stickers-command.sh`, purging prior builds). Packaged (`pyproject.toml`) for pip/pipx and a Homebrew tap. Font family is fixed: **ClaudeStatusLineStickers**. Env: macOS, Warp (Anonymous Pro 20, ligatures ON). Not a git repo.
-<!-- /llm:root -->
+<!-- /cumaru:root -->
 
 # SDLC flavor (software-development workflow)
 

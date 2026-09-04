@@ -5,13 +5,6 @@ generated-at: 2026-05-07T00:00:00Z
 apps: [meta]
 ---
 
-<!-- llm:exploring -->
-| Idea | Apps | Summary |
-|------|------|---------|
-
-_No explorations yet._
-<!-- /llm:exploring -->
-
 # Exploring
 
 Incubator for ideas that are **not yet plans**. Free-form notes the user wants to think about, sketch, or argue with before committing. An exploration has no tracker item and no commitment — it either matures into a plan or gets dropped. This file is the only entry point: drilling into a specific `<slug>/` requires explicit instruction.

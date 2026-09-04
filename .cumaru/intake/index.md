@@ -6,13 +6,6 @@ apps: [meta]
 tracker: [jira]
 ---
 
-<!-- llm:intake -->
-| Key | Type | Title | Status | Relates |
-|-----|------|-------|--------|---------|
-
-_No entries yet._
-<!-- /llm:intake -->
-
 # Intake
 
 A pillar for the **local mirror of a tracker** — items the project will work on, pulled from one or more trackers (Jira today; ClickUp, Linear, Basecamp planned). Source of truth stays in the tracker; this directory is a navigable index synced on demand by `llm intake <KEY>`. Every item is a sibling (flat layout); `type:` (epic | story | task | bug | spike | …) and `relates:` (cross-item links) replace the v2 hierarchy.

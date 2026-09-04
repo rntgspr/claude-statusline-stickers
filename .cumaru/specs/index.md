@@ -5,15 +5,6 @@ generated-at: 2026-05-01T00:00:00Z
 apps: [meta]
 ---
 
-<!-- llm:specs -->
-| Path | Summary | Apps | Depends-on | Relates |
-|------|---------|------|------------|---------|
-| [font-build](font-build/) | Turn a theme's sprite PNGs into one sbix colour-glyph font | engine | themes | install |
-| [themes](themes/) | Theme model + sprite fetching/normalization (STICKERS_THEME) | themes, engine | — | font-build |
-| [install](install/) | Apply a local build to the live font + cache + statusline | engine | font-build | themes |
-| [statusline](statusline/) | Render the built glyph lines into the Claude Code statusline | statusline | — | font-build |
-<!-- /llm:specs -->
-
 # Specs
 
 A pillar for the **living spec** of the system — what is true right now about product features, platform conventions, integrations, and durable decisions. Authored and refactored by the Lead; deltas are absorbed here on plan close.

@@ -1,19 +1,17 @@
 ---
 human_revised: false
-generated: false
 name: themes
 summary: Theme model (theme.json + sprites) and sprite fetching/normalization, selected by --theme/STICKERS_THEME
 depends-on: []
 relates: [font-build]
 apps: [themes, engine]
-deltas: [maintenance-all-themes-one-font, maintenance-cli-and-brew]
 ---
 
 # Themes
 
 ## Overview
 
-A *theme* is a self-contained folder `themes/<name>/` holding a `theme.json` (the sprite list — each with a display name, a cache key, and a source URL — plus an optional emoji probe) and the sprite PNGs themselves. The `theme.json` ships in the package (read-only); the PNGs are fetched into the work dir. The active theme is chosen by `--theme` / the `STICKERS_THEME` environment variable (default `pokemon`), which makes the whole pipeline theme-agnostic: pokémon is just one theme among many. Current themes: `pokemon`, `southpark`, `amongus`, `memes`.
+A *theme* is a self-contained folder `themes/<name>/` holding a `theme.json` (the sprite list — each with a display name, a cache key, and a source URL — plus an optional emoji probe) and the sprite PNGs themselves. The `theme.json` ships in the package (read-only); the PNGs are fetched into the work dir. The active theme is chosen by `--theme` / the `STICKERS_THEME` environment variable (default `pokemon`), which makes the whole pipeline theme-agnostic: pokémon is just one theme among many. Current themes: `pokemon`, `southpark`, `amongus`, `memes`, `powerrangers`, `cars`.
 
 `stickers fetch` (module `fetch.py`) populates a theme's work folder by downloading each sprite from its URL and normalizing it to a uniform size. Adding a new theme is pure data — a `theme.json` (bundled, or dropped in the work dir), no code — and the font family name is fixed across themes (see [install](../install/)), so themes never touch font naming.
 

@@ -4,12 +4,12 @@ generated: false
 apps: [meta]
 ---
 
-<!-- llm:roles -->
+<!-- cumaru:roles -->
 | Roles | Title | Scope | Status | Updated |
 |-------|-------|-------|--------|---------|
 
 _No custom roles yet._
-<!-- /llm:roles -->
+<!-- /cumaru:roles -->
 
 
 # Roles

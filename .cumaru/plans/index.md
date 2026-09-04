@@ -5,13 +5,6 @@ generated-at: 2026-05-01T00:00:00Z
 apps: [meta]
 ---
 
-<!-- llm:plans -->
-| Key | Title | Tasks | Apps |
-|-----|-------|-------|------|
-
-_No active plans yet._
-<!-- /llm:plans -->
-
 # Plans
 
 A pillar for **active execution plans** — one directory per item or internal initiative currently being worked on. Authored by the Lead at planning time; moved to `archive/` by the Lead on close.

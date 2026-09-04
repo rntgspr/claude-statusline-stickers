@@ -1,12 +1,10 @@
 ---
 human_revised: false
-generated: false
 name: statusline
 summary: Render the agent's sprite (resolved via the build manifest) into the Claude Code statusline
 depends-on: []
 relates: [font-build]
 apps: [statusline]
-deltas: [maintenance-all-themes-one-font, maintenance-cli-and-brew]
 ---
 
 # Statusline

@@ -1,12 +1,10 @@
 ---
 human_revised: false
-generated: false
 name: font-build
 summary: Turn a theme's sprite PNGs into one sbix colour-glyph font for the statusline
 depends-on: [themes]
 relates: [install]
 apps: [engine]
-deltas: [maintenance-all-themes-one-font, maintenance-drop-mosaic, maintenance-cli-and-brew]
 ---
 
 # Font build

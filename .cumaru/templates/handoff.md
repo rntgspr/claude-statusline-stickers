@@ -10,10 +10,10 @@ date: YYYY-MM-DD
 
 ## Files touched
 
-<!-- llm:files:touched -->
+<!-- cumaru:touched -->
 - `<relative/path/file.ts>` — created | modified | removed (1 line about the change)
 - ...
-<!-- /llm:files:touched -->
+<!-- /cumaru:touched -->
 
 ## Decisions made during implementation
 

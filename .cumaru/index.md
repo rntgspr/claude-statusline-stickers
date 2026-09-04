@@ -1,7 +1,7 @@
 ---
 human_revised: false
 generated: false
-framework-version: 3
+framework-version: 7
 apps: [meta]
 depends-on: [domain.md]
 ---
@@ -73,4 +73,4 @@ The pillars, roles, entry points, and domain conventions for this flavor are dec
 
 ## Project context
 
-Adopter-specific context the LLM should keep in mind: stack, conventions not yet in pillar specs, key links, current focus, hard constraints. Edit the `<!-- llm:components -->` table and the `<!-- llm:root -->` block at the top of [`domain.md`](domain.md) — their bodies are preserved across `llm update`.
+Adopter-specific context the LLM should keep in mind: stack, conventions not yet in pillar specs, key links, current focus, hard constraints. Edit the `<!-- cumaru:components -->` table and the `<!-- cumaru:root -->` block at the top of [`domain.md`](domain.md) — their bodies are preserved across `llm update`.

@@ -4,12 +4,12 @@ generated: false
 apps: [meta]
 ---
 
-<!-- llm:templates -->
+<!-- cumaru:templates -->
 | Templates | Status | Updated |
 |-----------|--------|---------|
 
 _No custom templates yet._
-<!-- /llm:templates -->
+<!-- /cumaru:templates -->
 
 # Templates
 

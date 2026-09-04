@@ -5,14 +5,6 @@ generated-at: 2026-05-01T00:00:00Z
 apps: [meta]
 ---
 
-<!-- llm:archive -->
-| Key | Type | Apps | Summary | Absorbed-in |
-|-----|------|------|---------|-------------|
-| maintenance-all-themes-one-font | maintenance | engine, themes, statusline | All themes in one font at distinct codepoints + agentNames manifest; statusline resolves the agent's sprite; per-cell mosaic dropped | n/a (no git) |
-| maintenance-drop-mosaic | maintenance | engine | Removed the dead per-cell mosaic path + orphaned dials/helpers; output byte-equivalent | n/a (no git) |
-| maintenance-cli-and-brew | maintenance | engine, themes, statusline | Package as `claude_statusline_stickers` with a `stickers` CLI (fetch/build/install) + pyproject + Homebrew tap formula; rebrand comics→stickers (family, env `STICKERS_*`, cache, `stickers-command.sh`); read-only data in the package, read-write work under `STICKERS_HOME` | n/a (no git) |
-<!-- /llm:archive -->
-
 # Archive
 
 A pillar for **plans that have shipped**. Once a plan closes (Lead runs the archive flow), the plan directory moves here, its delta is absorbed into `specs/`, and this index gains a new row.

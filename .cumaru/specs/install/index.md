@@ -1,12 +1,10 @@
 ---
 human_revised: false
-generated: false
 name: install
 summary: Apply a local build to the live font + cache + statusline; all themes ship in one font
 depends-on: [font-build]
 relates: [themes]
 apps: [engine]
-deltas: [maintenance-all-themes-one-font, maintenance-cli-and-brew]
 ---
 
 # Install
