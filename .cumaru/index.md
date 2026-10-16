@@ -2,7 +2,7 @@
 human_revised: false
 generated: false
 framework-version: 7
-apps: [meta]
+targets: [meta]
 depends-on: [domain.md]
 ---
 

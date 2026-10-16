@@ -2,7 +2,7 @@
 human_revised: false
 generated: false
 status: idea | considering | promoted | dropped
-apps: [newapp] | [legacy] | [mockoon] | [newapp, legacy] | [platform]
+targets: [newapp] | [legacy] | [mockoon] | [newapp, legacy] | [platform]
 summary: <one-line summary, used in exploring/index.md>
 ---
 

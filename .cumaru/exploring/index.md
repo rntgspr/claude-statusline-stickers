@@ -2,7 +2,7 @@
 human_revised: false
 generated: true
 generated-at: 2026-05-07T00:00:00Z
-apps: [meta]
+targets: [meta]
 ---
 
 # Exploring

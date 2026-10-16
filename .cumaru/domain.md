@@ -1,6 +1,6 @@
 ---
 human_revised: false
-apps: [meta]
+targets: [meta]
 ---
 
 <!-- cumaru:components -->
@@ -12,7 +12,9 @@ apps: [meta]
 <!-- /cumaru:components -->
 
 <!-- cumaru:root -->
-**claude-statusline-stickers** renders full-colour sprites in the Claude Code statusline — which only allows text + ANSI — by encoding each sprite as a single Apple `sbix` colour-bitmap glyph at a Private-Use codepoint, installed as a fallback-only font macOS resolves automatically. Theme-driven (`--theme` / `STICKERS_THEME`): `pokemon`, `southpark`, `amongus`, `memes`. A `stickers` CLI drives the pipeline: `stickers fetch` (sprite URLs → work dir, normalized to 256²) → `stickers build` (→ local `$STICKERS_HOME/build/`, never touches the live system) → `stickers install` (→ `~/Library/Fonts` + `~/.claude/claude-statusline-stickers` + `~/.claude/stickers-command.sh`, purging prior builds). Packaged (`pyproject.toml`) for pip/pipx and a Homebrew tap. Font family is fixed: **ClaudeStatusLineStickers**. Env: macOS, Warp (Anonymous Pro 20, ligatures ON). Not a git repo.
+**claude-statusline-stickers** renders full-colour sprites in the Claude Code statusline — which only allows text + ANSI — by encoding each sprite as a single Apple `sbix` colour-bitmap glyph at a Private-Use codepoint, installed as a fallback-only font macOS resolves automatically. Theme-driven (`--theme` / `STICKERS_THEME`): `pokemon`, `southpark`, `amongus`, `memes`. A `stickers` CLI drives the pipeline: `stickers fetch` (sprite URLs → work dir, normalized to 256²) → `stickers build` (→ local `$STICKERS_HOME/build/`, never touches the live system) → `stickers install` (→ `~/Library/Fonts` + `~/.claude/claude-statusline-stickers` + `~/.claude/stickers-command.sh`, purging prior builds). Packaged (`pyproject.toml`) for pip/pipx and a Homebrew tap. Font family is fixed: **ClaudeStatusLineStickers**. Env: macOS, Warp (Anonymous Pro 20, ligatures ON).
+
+**No issue tracker.** `intake/` stays empty and every plan is slug-based (`maintenance-<slug>`). Locally authored issues live in `issues/<slug>/`. Absorption commit messages must name the plan id they absorb: that message is the grep key from a spec change back to its plan.
 <!-- /cumaru:root -->
 
 # SDLC flavor (software-development workflow)

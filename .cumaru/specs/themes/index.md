@@ -4,7 +4,7 @@ name: themes
 summary: Theme model (theme.json + sprites) and sprite fetching/normalization, selected by --theme/STICKERS_THEME
 depends-on: []
 relates: [font-build]
-apps: [themes, engine]
+targets: [themes, engine]
 ---
 
 # Themes

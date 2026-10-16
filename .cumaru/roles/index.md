@@ -1,7 +1,7 @@
 ---
 human_revised: false
 generated: false
-apps: [meta]
+targets: [meta]
 ---
 
 <!-- cumaru:roles -->

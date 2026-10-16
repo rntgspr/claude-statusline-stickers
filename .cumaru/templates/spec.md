@@ -4,7 +4,7 @@ generated: false
 name: <area>
 summary: <one-line summary, used in specs/index.md>
 depends-on: []           # paths under specs/
-apps: [newapp] | [legacy] | [mockoon] | [newapp, legacy] | [platform]
+targets: [newapp] | [legacy] | [mockoon] | [newapp, legacy] | [platform]
 deltas: []               # reference list of plan IDs whose deltas built the current state of this spec — drill into archive/<PLAN-ID>/ for the verbose change record
 ---
 

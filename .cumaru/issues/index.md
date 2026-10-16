@@ -1,6 +1,6 @@
 ---
 human_revised: false
-apps: [meta]
+targets: [meta]
 summary: Framework guidance for locally authored SDLC issues and their required workflow.
 ---
 

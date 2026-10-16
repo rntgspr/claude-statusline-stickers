@@ -6,7 +6,7 @@ tracker: <TRACKER>
 type: story
 status: <TRACKER STATUS>
 synced-at: <ISO datetime>
-apps: []
+targets: []
 relates: []
 ---
 

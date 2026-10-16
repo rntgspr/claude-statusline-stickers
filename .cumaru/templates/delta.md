@@ -2,7 +2,7 @@
 human_revised: false
 plan: <PLAN-ID>
 date: YYYY-MM-DD
-apps: []
+targets: []
 ---
 
 # Delta — <PLAN-ID>

@@ -3,7 +3,7 @@ human_revised: false
 type: bug
 priority: medium
 status: open
-apps: [engine, statusline]
+targets: [engine, statusline]
 summary: Adding a theme shifts every later theme's codepoints, so a stale font cache silently renders a different theme's sprite instead of failing visibly
 ---
 

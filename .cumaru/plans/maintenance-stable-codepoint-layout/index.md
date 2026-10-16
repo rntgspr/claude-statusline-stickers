@@ -5,7 +5,7 @@ scope:
   - themes
 status: in-progress
 summary: Anchor each theme's codepoint block to a declared slot in theme.json so adding or removing a theme never moves another theme's sprites
-apps: [engine, themes]
+targets: [engine, themes]
 aux: []
 ---
 

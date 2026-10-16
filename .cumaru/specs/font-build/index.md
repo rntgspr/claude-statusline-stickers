@@ -4,7 +4,7 @@ name: font-build
 summary: Turn a theme's sprite PNGs into one sbix colour-glyph font for the statusline
 depends-on: [themes]
 relates: [install]
-apps: [engine]
+targets: [engine]
 ---
 
 # Font build

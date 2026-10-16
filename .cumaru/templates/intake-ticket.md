@@ -6,7 +6,7 @@ tracker: <TRACKER>
 type: task | bug | spike
 status: <TRACKER STATUS>
 synced-at: <ISO datetime>
-apps: []
+targets: []
 relates: []
 ---
 

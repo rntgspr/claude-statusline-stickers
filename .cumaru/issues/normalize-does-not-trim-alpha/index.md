@@ -3,7 +3,7 @@ human_revised: false
 type: improvement
 priority: medium
 status: open
-apps: [engine, themes]
+targets: [engine, themes]
 summary: normalize() contain-fits the padded source instead of the art, so a sprite with wide transparent margins is downscaled and renders soft
 ---
 

@@ -10,7 +10,7 @@ scope:
   - <area>/<subarea>/<concern>
 status: drafting | in-progress | blocked | done
 summary: <one-line summary, used in plans/index.md>
-apps: [newapp] | [legacy] | [mockoon] | [newapp, legacy] | [platform]
+targets: [newapp] | [legacy] | [mockoon] | [newapp, legacy] | [platform]
 aux: []
 ---
 

@@ -6,7 +6,7 @@ depends-on: []           # other task IDs in this plan
 concerns: []             # paths under specs/ this task touches
 files: []                # PREDICTED files the task is expected to create or modify (Lead's best estimate; not exhaustive — cascades are normal)
 status: pending | in-progress | done | blocked
-apps: [newapp] | [legacy] | [mockoon] | [platform]
+targets: [newapp] | [legacy] | [mockoon] | [platform]
 aux: []                  # files in the plan directory consumed by this task
 ---
 

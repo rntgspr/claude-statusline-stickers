@@ -2,7 +2,7 @@
 human_revised: false
 generated: true
 generated-at: <ISO datetime>
-apps: [meta]
+targets: [meta]
 ---
 
 # <Pillar name>
