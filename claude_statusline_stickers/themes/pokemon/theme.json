@@ -69,6 +69,30 @@
       "agentNames": [
         "pokeball"
       ]
+    },
+    {
+      "name": "charizard",
+      "key": "icon0006",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0006_f00_s0.png",
+      "agentNames": [
+        "charizard"
+      ]
+    },
+    {
+      "name": "gyarados",
+      "key": "icon0130",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0130_f00_s0.png",
+      "agentNames": [
+        "gyarados"
+      ]
+    },
+    {
+      "name": "eevee",
+      "key": "icon0133",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0133_f00_s0.png",
+      "agentNames": [
+        "eevee"
+      ]
     }
   ]
 }
