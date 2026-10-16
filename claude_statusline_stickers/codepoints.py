@@ -4,8 +4,8 @@ A theme owns a THEME_SPAN-wide slot, anchored by the `codepointSlot` its
 theme.json declares — so a theme's codepoints are the same in every build that
 ships it, whatever else the build contains. Inside that slot a sprite owns a
 CP_STRIDE-wide block: the icon at the block base, the full-sprite glyph at
-SPRITE_CP_OFF. The blank filler sits in its own block past the last sprite;
-probe glyphs follow it.
+SPRITE_CP_OFF. The blank filler owns the slot's last block, so appending a
+sprite never lands on it; probe glyphs follow it inside that block.
 
 Slot 0 is the probes'. Themes start at 1.
 """
@@ -22,7 +22,7 @@ def slot_capacity():
     return THEME_SPAN // CP_STRIDE - 1
 
 
-def collides_with_skeleton(font, slot, count):
+def collides_with_skeleton(font, slot):
     """True when a slot's range overlaps a codepoint the skeleton font maps.
 
     The skeleton supplies the cell metrics, not glyphs, so an overlap would let
@@ -34,16 +34,15 @@ def collides_with_skeleton(font, slot, count):
         used.update(sub.cmap.keys())
 
     base = theme_base(slot)
-    return any(c in used for c in range(base, base + (count + 1) * CP_STRIDE))
+    return any(c in used for c in range(base, base + THEME_SPAN))
 
 
 class CodepointLayout:
     """Maps a sprite index to the concrete codepoints of its block."""
 
-    def __init__(self, base, n_sprites):
-        """Anchor the layout at `base`, reserving one block per sprite + blank."""
+    def __init__(self, base):
+        """Anchor the layout at `base`, the first codepoint of its slot."""
         self.base = base
-        self.n_sprites = n_sprites
 
     def block(self, i):
         """First codepoint of sprite i's block."""
@@ -59,5 +58,5 @@ class CodepointLayout:
 
     @property
     def blank(self):
-        """The transparent filler codepoint (past the last sprite block)."""
-        return self.base + self.n_sprites * CP_STRIDE
+        """The transparent filler codepoint, fixed at the slot's last block."""
+        return self.base + slot_capacity() * CP_STRIDE

@@ -72,7 +72,7 @@ def check_slots(themes, font):
                 f"theme {theme.name!r} has {len(theme.sprites)} sprites; "
                 f"a slot holds {slot_capacity()}"
             )
-        if collides_with_skeleton(font, slot, len(theme.sprites)):
+        if collides_with_skeleton(font, slot):
             raise SystemExit(
                 f"theme {theme.name!r} slot {slot} overlaps a codepoint the "
                 f"skeleton font already maps"
@@ -89,7 +89,7 @@ def build(themes, out_fonts, out_cache):
     check_slots(themes, font)
 
     # probes once, in the reserved slot
-    probe_layout = CodepointLayout(theme_base(PROBE_SLOT), 0)
+    probe_layout = CodepointLayout(theme_base(PROBE_SLOT))
     renderers.add_blank(canvas, probe_layout, glyph="sprite.blank")
     renderers.render_probes(canvas, probe_layout, cache_dir=out_cache)
 
@@ -97,7 +97,7 @@ def build(themes, out_fonts, out_cache):
     for theme in themes:
         # the slot is the theme's own, so this base does not depend on which
         # other themes this build happens to include
-        layout = CodepointLayout(theme_base(theme.codepoint_slot), len(theme.sprites))
+        layout = CodepointLayout(theme_base(theme.codepoint_slot))
         renderers.add_blank(canvas, layout, glyph=f"sprite.{theme.name}.blank")
 
         keys = []

@@ -27,7 +27,7 @@ Codepoints are **anchored to theme identity**, not to build order. Each theme de
 
 - WHEN allocating glyphs THE SYSTEM SHALL anchor each theme at `CP_BASE + codepointSlot * THEME_SPAN`, taking the slot from the theme's own `theme.json` — never from the theme's position in the build's theme list.
 - WHEN a theme is added or removed THE SYSTEM SHALL keep every other theme's sprites at the codepoints they already had.
-- WITHIN a theme's slot THE SYSTEM SHALL give each sprite a `CP_STRIDE`-wide block, the icon at the block base and the full-sprite glyph at `SPRITE_CP_OFF`, with the blank filler in its own block past the last sprite.
+- WITHIN a theme's slot THE SYSTEM SHALL give each sprite a `CP_STRIDE`-wide block, the icon at the block base and the full-sprite glyph at `SPRITE_CP_OFF`, with the blank filler fixed at the slot's last block so that appending a sprite never reuses the codepoint an older build used as filler.
 - WHEN a theme declares no slot, claims the reserved probe slot 0, collides with another theme's slot, holds more sprites than a slot fits, or overlaps the skeleton font's cmap THE SYSTEM SHALL fail the build naming the theme, before rendering any glyph.
 - WHERE a theme declares an emoji probe THE SYSTEM SHALL additionally map that emoji codepoint to the named sprite's icon glyph.
 
