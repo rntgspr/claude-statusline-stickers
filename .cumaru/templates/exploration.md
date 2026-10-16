@@ -1,9 +1,8 @@
 ---
 human_revised: false
-generated: false
-status: idea | considering | promoted | dropped
-targets: [newapp] | [legacy] | [mockoon] | [newapp, legacy] | [platform]
-summary: <one-line summary, used in exploring/index.md>
+status: "idea | considering | promoted | dropped"
+targets: "[<app>] | [<app-a>, <app-b>] | [platform]"
+summary: <one-line summary, used by cumaru tree>
 ---
 
 # <Idea title>

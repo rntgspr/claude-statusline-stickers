@@ -1,4 +1,5 @@
 ---
+summary: "Retired v7 template for a finalized plan delta; v9 absorbs delta-draft.md directly into specs."
 human_revised: false
 plan: <PLAN-ID>
 date: YYYY-MM-DD

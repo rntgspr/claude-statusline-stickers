@@ -1,33 +1,36 @@
 ---
 human_revised: false
-generated: true
-generated-at: 2026-05-01T00:00:00Z
 targets: [meta]
+summary: Framework guidance for Intake and its required workflow.
 ---
+
 
 # Intake
 
-A pillar for the **local mirror of a tracker** — items the project will work on, pulled from one or more trackers (Jira today; ClickUp, Linear, Basecamp planned). Source of truth stays in the tracker; this directory is a navigable index synced on demand by `llm intake <KEY>`. Every item is a sibling (flat layout); `type:` (epic | story | task | bug | spike | …) and `relates:` (cross-item links) replace the v2 hierarchy.
+A pillar for the **local mirror of a tracker** — items the project will work on, authored from directly read or user-provided tracker source. Source of truth stays in the tracker. Every item is a sibling; `type:` and `relates:` replace hierarchy.
 
 ## Rules
 
-- **Mirror, not authoritative.** The tracker is the source of truth. Entries here are local restatements — `## Overview` and `## Acceptance Criteria (EARS)` are authored in English from the source description, not pasted verbatim.
-- **Mechanical sync.** Any role (Lead, Dev) or the user can trigger `llm intake <KEY>` to create or refresh an entry. Sync is not a role responsibility; roles only **read** intake.
+- **Mirror, not authoritative.** The tracker is the source of truth. Entries here are local restatements — `## Overview` and `## Acceptance Criteria (EARS / RFC 2119)` are authored in English from the source description, not pasted verbatim.
+- **Source import.** Use the `cumaru-intake` skill to create or refresh an entry without overwriting refined local content.
 - **Frontmatter `status:` and `synced-at:` are managed by the CLI.** Body sections (`## Overview`, `## Acceptance Criteria`, `## Coordination`, `## Local notes`) are yours to author and refine.
-- **Flat layout.** Every item lives at `intake/<KEY>/index.md` regardless of type. `type:` discriminates; `relates:` records cross-item links (parent epic, parent story, …) so a project mixing trackers stays navigable.
-- **Per-item `tracker:`.** Each item's frontmatter carries `tracker: jira` (or `linear`, when wired) — unambiguous provenance even when the project pulls from multiple trackers (declared as the list on this index's `tracker:` frontmatter).
-- **Stories with more than one active plan** carry a `## Coordination` section in their `index.md` (cross-ticket order, integration points, open decisions). See `templates/intake-story.md`.
-- **Each entry is a directory** with `index.md` and any aux files, following the universal entity rules.
+- **Flat layout.** Every item lives at `intake/<KEY>.md` regardless of type. `type:` discriminates; `relates:` records cross-item links (parent epic, parent story, …) so a project mixing trackers stays navigable.
+- **Per-item `tracker:`.** Each item's frontmatter carries the tracker observed
+  from its source. There is no project-wide tracker registry on this index;
+  per-item provenance remains unambiguous when a project uses multiple trackers.
+- **Stories with more than one active plan** carry a `## Coordination` section in their own intake file (cross-ticket order, integration points, open decisions). See `templates/intake-story.md`.
+- **Each entry is one Markdown file.** Attachments or auxiliary files are not stored below intake items; preserve them elsewhere and link them semantically when needed.
 
 ## When to use
 
-- Opening a plan: read the linked `intake/<KEY>/index.md` for the item's `## Overview` and `## Acceptance Criteria (EARS)` — plans for tracker-backed work reference these instead of repeating them.
+- Opening a plan: read the linked `intake/<KEY>.md` for the item's `## Overview` and `## Acceptance Criteria (EARS / RFC 2119)` — plans for tracker-backed work reference these instead of repeating them.
 - Coordinating multiple plans under the same story — record cross-ticket decisions in the story's `## Coordination` section before dispatching the next plan.
-- After upstream changes — run `llm intake <KEY>` to refresh `status:` and `synced-at:`; if the body still has a RAW block, the description is updated too.
+- After upstream changes, use `cumaru-intake` to adjudicate source changes against refined local content.
 
 ## When NOT to use
 
 - Discussion of implementation approach → `plans/<PLAN-ID>/`.
 - Description of the system as it is today → `specs/<area>/`.
 - Open questions or ideas not yet tied to a tracker item → `exploring/<slug>/`.
-- Completed work → `archive/<PLAN-ID>/`.
+- Locally authored bugs, features, improvements, or chores → `issues/<slug>/`.
+- Completed work → `plans/<PLAN-ID>/`.

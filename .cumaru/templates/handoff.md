@@ -4,6 +4,7 @@ plan: <PLAN-ID>
 task: T<N>
 status: complete | partial | blocked
 date: YYYY-MM-DD
+summary: Framework guidance for Hand-off — <PLAN-ID> / T<N> and its required workflow.
 ---
 
 # Hand-off — <PLAN-ID> / T<N>

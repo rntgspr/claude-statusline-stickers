@@ -32,7 +32,7 @@ issues/<slug>/
 └── *.md              ← optional aux, declared in the body when needed
 ```
 
-`<slug>` is plain kebab-case with no tracker key or `maintenance-` prefix. Required frontmatter stays deliberately small: `type`, `priority`, `status`, `apps`, and `summary`. Use standard SDLC types (`bug`, `feature`, `improvement`, `task`, `chore`) and priorities (`critical`, `high`, `medium`, `low`).
+`<slug>` is plain kebab-case with no tracker key or `maintenance-` prefix. Required frontmatter stays deliberately small: `type`, `priority`, `status`, `targets`, and `summary`. Use standard SDLC types (`bug`, `feature`, `improvement`, `task`, `chore`) and priorities (`critical`, `high`, `medium`, `low`).
 
 ## Lifecycle
 
@@ -41,7 +41,6 @@ An issue is transient. It has two exits:
 - **Promote** — create `plans/maintenance-<slug>/`, distill the issue's description and acceptance criteria into the plan, then remove the issue directory.
 - **Drop** — remove the directory when the issue is resolved elsewhere, rejected, or no longer relevant.
 
-Issues never go directly to `archive/`. Only completed plans do.
 
 ## Loading and ownership
 

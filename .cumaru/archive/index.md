@@ -1,4 +1,5 @@
 ---
+summary: "Local transient staging for closed plans before spec absorption; retired by the v9 flow and normally empty."
 human_revised: false
 generated: true
 generated-at: 2026-05-01T00:00:00Z

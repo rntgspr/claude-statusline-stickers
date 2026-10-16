@@ -1,6 +1,5 @@
 ---
 human_revised: false
-generated: false
 key: <KEY>
 tracker: <TRACKER>
 type: story
@@ -8,6 +7,7 @@ status: <TRACKER STATUS>
 synced-at: <ISO datetime>
 targets: []
 relates: []
+summary: Framework guidance for <Tracker story title> and its required workflow.
 ---
 
 # <Tracker story title>
@@ -16,12 +16,15 @@ relates: []
 
 Story-level objective in English — what is being built and why it matters as a unit. 1-3 paragraphs. Refined as understanding sharpens; re-sync from the tracker when the upstream description changes materially.
 
-## Acceptance Criteria (EARS)
+## Acceptance Criteria (EARS / RFC 2119)
+
+Pick one dominant style for this section: EARS for event/state behavior; RFC 2119 for constraints.
 
 High-level acceptance criteria for the story as a whole. Tickets under this story refine these into ticket-level criteria.
 
 - WHEN <trigger> THE SYSTEM SHALL <observable response>.
 - WHEN <trigger> AND <condition> THE SYSTEM SHALL <observable response>.
+- The <resource> MUST <behavior>.
 
 Plans for tickets under this story do not repeat these — they reference the relevant ticket or this file.
 
@@ -39,17 +42,17 @@ Stories are executed **linearly** at the Lead level — only one plan from this 
 
 | Plan | Status | Apps | Order | Notes |
 |---|---|---|---|---|
-| [JET-XXXX](../../../plans/JET-XXXX/) | drafting / in-progress / done | newapp | 1 | foundation |
-| [JET-YYYY](../../../plans/JET-YYYY/) | drafting | newapp | 2 (depends on JET-XXXX) | UI integration |
+| [AAA-XXXX](../../../plans/AAA-XXXX/) | drafting / in-progress / done | <app-a> | 1 | foundation |
+| [AAA-YYYY](../../../plans/AAA-YYYY/) | drafting | <app-b> | 2 (depends on AAA-XXXX) | integration |
 
 ### Integration points
 
-- `<path/to/file.ts>` — JET-XXXX owns; JET-YYYY consumes (read-only).
-- API contract `/foo` — JET-XXXX ships v2; JET-ZZZZ must continue working with v1 until cutover.
+- `<path/to/file.ts>` — AAA-XXXX owns; AAA-YYYY consumes (read-only).
+- API contract `/foo` — AAA-XXXX ships v2; AAA-ZZZZ must continue working with v1 until cutover.
 
 ### Open decisions
 
-- Cutover strategy for JET-ZZZZ → JET-XXXX: feature flag or hard switch? (pending)
+- Cutover strategy for AAA-ZZZZ → AAA-XXXX: feature flag or hard switch? (pending)
 
 ## Local notes
 

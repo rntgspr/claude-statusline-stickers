@@ -1,6 +1,10 @@
 ---
 human_revised: false
-generated: false
+name: <area discovery>
+summary: Framework guidance for Bootstrap — <area> and its required workflow.
+depends-on: [] # relevant paths under specs/
+relates: [] # soft links to related intake items or spec areas
+targets: [] # component keys from config.yaml
 ---
 
 # Bootstrap — <area>
@@ -9,9 +13,14 @@ generated: false
 INSTRUCTION FOR LLM:
 
 This file is the persistent discovery log for this spec area. It is created
-by `llm specs bootstrap` (light pass) and grown by future
-`llm specs deep <area>` invocations. Leave it on disk after editing — it is
+by the `cumaru-specs` bootstrap recipe (light pass) and grown by that skill's
+deep-pass recipe. Leave it on disk after editing — it is
 the area's evolving record of how the spec was inferred from code.
+
+Set `name` to a concise discovery concern, `depends-on` to prerequisite spec
+paths, `relates` to useful non-blocking links, and `targets` to affected
+component keys declared in `config.yaml`. This file is working evidence, not a
+second durable requirements contract.
 
 The light pass output below is filled in deterministically by the CLI; the
 sections under `## Files` and `## Topics` are yours to write.
@@ -24,12 +33,12 @@ sections under `## Files` and `## Topics` are yours to write.
 
   2. Write `specs/<area>/index.md` following `templates/spec.md`:
      - frontmatter: `name`, `summary` (one line), `depends-on:` (use the
-       cross-area imports detected below), `apps:` (from the project's
-       `schema.yaml` `apps.values`), `deltas: []`.
+       cross-area imports detected below), `targets:` (from the project's
+       `config.yaml` `targets.values`).
      - `## Overview` — 1-3 paragraphs: what the area does, why it exists.
-     - `## Requirements (EARS)` — observable behaviors as
-       `WHEN <trigger> THE SYSTEM SHALL <response>`. Light pass produces
-       broad, possibly imprecise EARS; the deep pass refines.
+     - `## Requirements (EARS / RFC 2119)` — EARS for observable behaviors,
+        RFC 2119 for constraints/invariants. Light pass produces
+        broad, possibly imprecise requirements; the deep pass refines.
      - `## Decisions` — non-obvious design choices visible in the code, or
        `(none surfaced)` if you cannot tell.
      - `## Files` — markdown list with one-line role descriptions per file.
@@ -54,7 +63,7 @@ sections under `## Files` and `## Topics` are yours to write.
      - For each topic addressed: `### Topic: <slug>` followed by findings
        (file refs, decisions discovered, reconciliations made).
 
-  4. Refine `specs/<area>/index.md` with what you learned: tighten EARS,
+  4. Refine `specs/<area>/index.md` with what you learned: tighten requirements,
      add `## Decisions`, update `## Files` descriptions, split into
      `<area>/<concern>.md` if it grows large — or promote a concern to a
      `<area>/<subarea>/` directory (with its own `index.md`) when it grows
