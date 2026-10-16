@@ -93,6 +93,86 @@
       "agentNames": [
         "eevee"
       ]
+    },
+    {
+      "name": "mewtwo",
+      "key": "icon0150",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0150_f00_s0.png",
+      "agentNames": [
+        "mewtwo"
+      ]
+    },
+    {
+      "name": "mew",
+      "key": "icon0151",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0151_f00_s0.png",
+      "agentNames": [
+        "mew"
+      ]
+    },
+    {
+      "name": "snorlax",
+      "key": "icon0143",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0143_f00_s0.png",
+      "agentNames": [
+        "snorlax"
+      ]
+    },
+    {
+      "name": "gengar",
+      "key": "icon0094",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0094_f00_s0.png",
+      "agentNames": [
+        "gengar"
+      ]
+    },
+    {
+      "name": "squirtle",
+      "key": "icon0007",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0007_f00_s0.png",
+      "agentNames": [
+        "squirtle"
+      ]
+    },
+    {
+      "name": "meowth",
+      "key": "icon0052",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0052_f00_s0.png",
+      "agentNames": [
+        "meowth"
+      ]
+    },
+    {
+      "name": "jigglypuff",
+      "key": "icon0039",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0039_f00_s0.png",
+      "agentNames": [
+        "jigglypuff"
+      ]
+    },
+    {
+      "name": "magikarp",
+      "key": "icon0129",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0129_f00_s0.png",
+      "agentNames": [
+        "magikarp"
+      ]
+    },
+    {
+      "name": "ditto",
+      "key": "icon0132",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0132_f00_s0.png",
+      "agentNames": [
+        "ditto"
+      ]
+    },
+    {
+      "name": "dragonite",
+      "key": "icon0149",
+      "url": "https://resource.pokemon-home.com/battledata/img/pokei128/icon0149_f00_s0.png",
+      "agentNames": [
+        "dragonite"
+      ]
     }
   ]
 }

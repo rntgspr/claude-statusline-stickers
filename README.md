@@ -161,7 +161,7 @@ resolves it.
 
 | Theme | Agent names |
 |---|---|
-| `pokemon` | `bulbasaur` `charmander` `blastoise` `pikachu` `vulpix` `psyduck` `tauros` `pokeball` `charizard` `gyarados` `eevee` |
+| `pokemon` | `bulbasaur` `charmander` `blastoise` `pikachu` `vulpix` `psyduck` `tauros` `pokeball` `charizard` `gyarados` `eevee` `mewtwo` `mew` `snorlax` `gengar` `squirtle` `meowth` `jigglypuff` `magikarp` `ditto` `dragonite` |
 | `southpark` | `cartman` `kenny` `butters` `chef` `clyde` `craig` `damien` `citywok` |
 | `amongus` | `red` `green` `cyan` `yellow` `crew` `logo` |
 | `memes` | `doge` `grumpycat` `harambe` `badluck` `pepe` `justdoit` `gaben` `gabedog` |
