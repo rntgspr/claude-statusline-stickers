@@ -11,13 +11,13 @@ targets: [statusline]
 
 ## Overview
 
-`statusline/stickers-command.sh` is the consumer end. It composes the Claude Code statusline — current directory + git branch, then model + context-window usage + estimated cost — and below that the **agent's sprite**. The agent is the folder right above the project dir (`agentic-workspace/<agent>/<project>`); the script resolves it against `~/.claude/claude-statusline-stickers/manifest.json` (via `jq`) and `cat`s the matching `font_<theme>_<key>.txt`, which is plain Private-Use-Area glyph text and so survives the statusline's escape filter. The glyph font is fallback-only, so macOS resolves it for those PUA codepoints without changing the terminal's primary font.
+`statusline/stickers-command.sh` is the consumer end. It composes the Claude Code statusline — current directory + git branch, then model + context-window usage — and below that the **agent's sprite**. The agent is the folder right above the project dir (`agentic-workspace/<agent>/<project>`); the script resolves it against `~/.claude/claude-statusline-stickers/manifest.json` (via `jq`) and `cat`s the matching `font_<theme>_<key>.txt`, which is plain Private-Use-Area glyph text and so survives the statusline's escape filter. The glyph font is fallback-only, so macOS resolves it for those PUA codepoints without changing the terminal's primary font.
 
 Because every theme ships in one font (see [font-build](../font-build/)), the manifest covers all agents at once: switching agent switches the sprite with no reinstall.
 
 ## Requirements (EARS)
 
-- WHEN rendering THE SYSTEM SHALL print the cwd and git branch, the model with context-window usage and cost, then the agent's sprite — dropping any segment whose input field is missing.
+- WHEN rendering THE SYSTEM SHALL print the cwd and git branch, the model with context-window usage, then the agent's sprite — dropping any segment whose input field is missing.
 - WHEN resolving the sprite THE SYSTEM SHALL look up an agent name from both the project dir itself and the folder above it in `manifest.json` — the current dir winning on conflict — then cat that sprite's txt.
 - WHEN the agent is absent from the manifest but the project sits under `agentic-workspace/` THE SYSTEM SHALL fall back to the pokéball; outside `agentic-workspace` it SHALL draw no sprite.
 - WHEN `hideStickers` is true in any consulted `settings.json` THE SYSTEM SHALL omit the sprite.
