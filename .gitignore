@@ -7,6 +7,7 @@
 build/
 dist/
 *.egg-info/
+.assets/
 
 # Theme sprite PNGs are third-party art, fetched on demand by `stickers fetch`
 # (URLs live in each theme.json) — not redistributed here. A "bring-your-own"
