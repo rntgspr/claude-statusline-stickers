@@ -66,7 +66,7 @@ git clone <repo-url> claude-statusline-stickers && cd claude-statusline-stickers
 pipx install .          # or: python3 -m pip install .
 ```
 
-Either way you get the `stickers` command **with the four themes bundled** — nothing
+Either way you get the `stickers` command **with the eight themes bundled** — nothing
 to download by hand. The pipeline then fetches each theme's sprites (third-party PNGs,
 not shipped in the package), builds the font, and wires it live:
 
