@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "claude-statusline-stickers"
-version = "0.1.0"
+version = "0.2.0"
 description = "Themed sprite-glyph font for the Claude Code statusline — a sticker per agent."
 readme = "README.md"
 requires-python = ">=3.10"
