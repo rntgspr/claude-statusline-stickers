@@ -9,6 +9,7 @@ Idempotent: existing files are skipped unless force is set. Orchestrated by the
 """
 import io
 import os
+import urllib.parse
 import urllib.request
 
 from PIL import Image
@@ -33,7 +34,10 @@ def fetch(sprite, dest_dir, force=False):
     if dest.exists() and not force:
         return "skip (exists)"
 
-    req = urllib.request.Request(sprite.url, headers={"User-Agent": USER_AGENT})
+    # Some hosts (e.g. nicepng) reject hotlinks without a same-site Referer.
+    parts = urllib.parse.urlsplit(sprite.url)
+    referer = f"{parts.scheme}://{parts.netloc}/"
+    req = urllib.request.Request(sprite.url, headers={"User-Agent": USER_AGENT, "Referer": referer})
     with urllib.request.urlopen(req, timeout=30) as resp:
         data = resp.read()
     img = Image.open(io.BytesIO(data))

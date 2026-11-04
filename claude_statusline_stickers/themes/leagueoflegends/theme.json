@@ -1,0 +1,110 @@
+{
+  "name": "leagueoflegends",
+  "codepointSlot": 9,
+  "sprites": [
+    {
+      "name": "lux",
+      "key": "lux",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/lux/lux_happy_cheerful_inventory.png",
+      "agentNames": [
+        "lux"
+      ]
+    },
+    {
+      "name": "amumu",
+      "key": "amumu",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/amumu/amumu_sad_crying_inventory.png",
+      "agentNames": [
+        "amumu"
+      ]
+    },
+    {
+      "name": "blitz",
+      "key": "blitz",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/blitzcrank/blitzcrank_sad_confused_inventory.png",
+      "agentNames": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "braum",
+      "key": "braum",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/braum/braum_happy_heart_inventory.png",
+      "agentNames": [
+        "braum"
+      ]
+    },
+    {
+      "name": "jinx",
+      "key": "jinx",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/jinx/jinx_meme_taunt_inventory.png",
+      "agentNames": [
+        "jinx"
+      ]
+    },
+    {
+      "name": "yasuo",
+      "key": "yasuo",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/yasuo/yasuo_meme_taunt_inventory.png",
+      "agentNames": [
+        "yasuo"
+      ]
+    },
+    {
+      "name": "ziggs",
+      "key": "ziggs",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/ziggs/ziggs_happy_cheers_inventory.png",
+      "agentNames": [
+        "ziggs"
+      ]
+    },
+    {
+      "name": "lulu",
+      "key": "lulu",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/lulu/lulu_happy_cheerful_inventory.png",
+      "agentNames": [
+        "lulu"
+      ]
+    },
+    {
+      "name": "teemo",
+      "key": "teemo",
+      "url": "https://www.nicepng.com/png/full/190-1901112_photo-teemo-transparent-background.png",
+      "agentNames": [
+        "teemo"
+      ]
+    },
+    {
+      "name": "poro",
+      "key": "poro",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/flairs/poro_happy_cheers_inventory.png",
+      "agentNames": [
+        "poro"
+      ]
+    },
+    {
+      "name": "garen",
+      "key": "garen",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/garen/garen_happy_proud_inventory.png",
+      "agentNames": [
+        "garen"
+      ]
+    },
+    {
+      "name": "thresh",
+      "key": "thresh",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/thresh/em_thresh_frustrated_inventory.png",
+      "agentNames": [
+        "thresh"
+      ]
+    },
+    {
+      "name": "annie",
+      "key": "annie",
+      "url": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes/champions/annie/em_annie_steamed_inventory.png",
+      "agentNames": [
+        "annie"
+      ]
+    }
+  ]
+}

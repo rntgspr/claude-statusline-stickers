@@ -66,7 +66,7 @@ git clone <repo-url> claude-statusline-stickers && cd claude-statusline-stickers
 pipx install .          # or: python3 -m pip install .
 ```
 
-Either way you get the `stickers` command **with the eight themes bundled** — nothing
+Either way you get the `stickers` command **with the nine themes bundled** — nothing
 to download by hand. The pipeline then fetches each theme's sprites (third-party PNGs,
 not shipped in the package), builds the font, and wires it live:
 
@@ -87,8 +87,8 @@ new font. (The sticker only shows in a dir named after an agent — see below.)
 
 ## Themes & agents
 
-Eight themes are bundled (`pokemon`, `southpark`, `amongus`, `memes`,
-`powerrangers`, `cars`, `smurfs`, `zootopia`), so a fresh install works with
+Nine themes are bundled (`pokemon`, `southpark`, `amongus`, `memes`,
+`powerrangers`, `cars`, `smurfs`, `zootopia`, `leagueoflegends`), so a fresh install works with
 zero setup —
 `stickers fetch` just pulls their sprites. The sticker shown is chosen by the
 **agent** — resolved from the **project dir itself** or the **folder right above
@@ -105,14 +105,14 @@ under `agentic-workspace`) shows no sticker. The full list is at the bottom:
    ```json
    {
      "name": "<name>",
-     "codepointSlot": 9,
+     "codepointSlot": 10,
      "sprites": [
        { "name": "hero", "key": "hero", "url": "https://…/hero.png", "agentNames": ["hero"] }
      ]
    }
    ```
    `codepointSlot` is the theme's permanent home in the PUA — pick a number no
-   other theme uses (bundled themes take 1–8; slot 0 is the probe glyphs). It is
+   other theme uses (bundled themes take 1–9; slot 0 is the probe glyphs). It is
    what keeps a theme's sprites at the same codepoints when other themes come and
    go, so the terminal's cached font can never draw the wrong one. A missing or
    duplicated slot fails the build by name. `agentNames` must be unique across
@@ -169,6 +169,7 @@ resolves it.
 | `cars` | `mcqueen` `lightning` `ramon` `flo` `francesco` `schnell` `finn` `bobby` `snotrod` `king` `carslogo` |
 | `smurfs` | `papa` `smurfette` `brainy` `clumsy` `hefty` `grouchy` `gutsy` `vanity` `smurf` `blossom` `lily` `melody` `storm` `vexy` `hackus` `gargamel` |
 | `zootopia` | `judy` `nick` `bogo` `clawhauser` `bellwether` `doug` `finnick` `flash` `gazelle` `lionheart` `mrbig` `otterton` `priscilla` `yax` `zoologo` |
+| `leagueoflegends` | `lux` `amumu` `blitz` `braum` `jinx` `yasuo` `ziggs` `lulu` `teemo` `poro` `garen` `thresh` `annie` |
 
 The Power Rangers carry a `mega` prefix because `red`, `green`, and `yellow` are
 already Among Us — a duplicate `agentNames` entry fails the build outright. Same
