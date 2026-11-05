@@ -105,6 +105,14 @@
       "agentNames": [
         "annie"
       ]
+    },
+    {
+      "name": "gnar",
+      "key": "gnar",
+      "url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6cf3dcf4-3e01-439f-8e79-bc764099ba54/djhlvyz-aded13c7-1b0e-437d-8bb3-1140207c22e6.png/v1/fill/w_903,h_885/gnar_png_by_yudelrey_djhlvyz-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiIvZi82Y2YzZGNmNC0zZTAxLTQzOWYtOGU3OS1iYzc2NDA5OWJhNTQvZGpobHZ5ei1hZGVkMTNjNy0xYjBlLTQzN2QtOGJiMy0xMTQwMjA3YzIyZTYucG5nIiwid2lkdGgiOiI8PTExMDMifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2kCjWJpmNwf2OyS_bvWwEgYIuDwmqbuyQ2MP_VGnUJw",
+      "agentNames": [
+        "gnar"
+      ]
     }
   ]
 }
